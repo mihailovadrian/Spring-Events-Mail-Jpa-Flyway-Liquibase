@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"/>
+<!--    <link rel="stylesheet" type="text/css" href="/resources/static/css/style.css"/>-->
+</head>
+<body>
+<h1 style="background-color:DodgerBlue;">Fortech Digital</h1>
+<table style="border:1px solid black;width:100%;table-layout:auto">
+    <tr>
+        <td><b>First Name</b></td>
+        <td><b>Last Name</b></td>
+    </tr>
+    <tr>
+        <td th:text="${firstName}"></td>
+        <td th:text="${lastName}"></td>
+    </tr>
+</table>
+
+<header class="toolbar"></header>
+
+<div class="container">
+    <div class="row">
+        <label>First Name</label>
+        <input type="text" name="firstname">
+    </div>
+
+    <div class="row">
+        <label>Age</label>
+        <input type="text" name="age" placeholder="Age">
+    </div>
+
+    <div class="row">
+        <label>Salary</label>
+        <input type="text" name="salary" placeholder="Salary">
+    </div>
+
+    <div class="row">
+        <label>TaxPayer</label>
+        <select name="country">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <label>Department</label>
+        <select name="department">
+            <option value="hr">HR</option>
+            <option value="marketing">Marketing</option>
+            <option value="it">IT</option>
+            <option value="sales">Sales</option>
+            <option value="support">Support</option>
+        </select>
+    </div>
+
+    <button class="submit-button">Register</button>
+
+</div>
+</body>
+</html>

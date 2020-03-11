@@ -1,0 +1,16 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet id="4" author="George Muresan">
+        <insert tableName="employee">
+            <column name="first_name" value="Mihailov"></column>
+            <column name="last_name" value="Bogdan"></column>
+            <column name="age" valueNumeric="24"></column>
+            <column name="adress" value="Frunzisului 106"></column>
+        </insert>
+        <rollback>
+            delete from employee where first_name = 'Mihailov';
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
